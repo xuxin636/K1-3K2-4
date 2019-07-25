@@ -1,5 +1,5 @@
 #!/bin/sh
-#test.sh
+#K1=3K2=4.sh
 #Slurm script to run R program that generates graph of discrete Delta-hedging call
 
 #Slurm directives
