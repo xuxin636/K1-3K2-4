@@ -1,7 +1,7 @@
 set.seed(1234)
 library(mvtnorm)
 cond <- as.numeric(Sys.getenv("SLURM_ARRAY_TASK_ID"))
-N=3000;J <- 20;K1 <- 3;K2 <- 4;K <- K1+K2;JJ_ind <- J/K2
+N=2000;J <- 20;K1 <- 3;K2 <- 4;K <- K1+K2;JJ_ind <- J/K2
 Q <- cbind(matrix(rep(1,J*K1),nrow=J,ncol = K1),matrix(0,nrow=J,ncol=K2))
 for(k in 1:K2){
   Q[(1+(k-1)*JJ_ind):(k*JJ_ind),k+K1] <- 1
