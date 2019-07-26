@@ -19,7 +19,6 @@ THETA_tuta <- matrix(0,nrow=length(mm)^S,ncol=S);
 for(k in 1:S){THETA_tuta[,S-k+1] <- rep(c(rep(1,length(mm)^(k-1))%*%t(mm)),length(mm)^(S-k))}
 THETA_tuta <- cbind(rep(1,nrow(THETA_tuta)),THETA_tuta)
 D_initial <- cbind(sort(rnorm(J,0,1))[rank(colMeans(response))],matrix(runif(J*K,0.5,1.5),nrow=J,ncol=K)*Q)
-D_initial[J,(K-1)] <- 0#for identification
 response <- t(response)
 A_0 <- t(D_initial)
 THETA_tuta_12 <- t(matrix(t(THETA_tuta),nrow=ncol(THETA_tuta)*length(mm))[2:(K1+1),])
