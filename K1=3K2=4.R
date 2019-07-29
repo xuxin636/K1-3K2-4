@@ -118,5 +118,5 @@ ind[1:(K+1),] <- A_0;
 ind[K+2,1] <- rho
 
 
-write.csv(RESULT, file =paste0('K1=3K2=4',cond,'.csv'))
+write.csv(ind, file =paste0('K1=3K2=4',cond,'.csv'))
 
